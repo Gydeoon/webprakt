@@ -2,15 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <menu name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1 - Praktikum Web</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rijal Rizqullah</h1>
-    <p>Prodi : Informatika</p>
-    <div>
-        <p>#wongkalahan</p>
-        <img src="https://i.pinimg.com/736x/cb/06/5b/cb065b767fbaa455b428663e78492632.jpg" alt="desc">
+
+    <div class="profile-container">
+        <img src="assets/image/wongkalahan.jpg" alt="Foto Profil" />
+        <div class="text-group">
+            <h3>Rijal Rizqullah</h3>
+            <p>241110033 / Informatika</p>
+        </div>
     </div>
+
+    <hr>
+
+    <p>Ini adalah tugas <strong>Praktikum Web</strong> untuk menampilkan minimal 10 elemen HTML yang berbeda. Contohnya termasuk teks <em>miring</em>, teks dengan <mark>highlight</mark>, serta teks yang <s>dicoret</s>.</p>
+
+    <p>Di bawah ini adalah contoh penggunaan tabel dan daftar bernomor (Ordered List):</p>
+    
+    <ol>
+        <li>Pengenalan HTML</li>
+        <li>Implementasi Elemen</li>
+    </ol>
+
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Mata Kuliah</th>
+            <th>SKS</th>
+        </tr>
+        <tr>
+            <td>Praktikum Web</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <p>Berikut adalah beberapa elemen form dasar:</p>
+    <ul>
+        <li><input type="text" placeholder="Ini elemen input teks"></li>
+        <li><input type="radio"> Ini elemen input radio</li>
+        <li>
+            <select>
+                <option>Opsi Dropdown 1</option>
+                <option>Opsi Dropdown 2</option>
+            </select>
+        </li>
+        <li><textarea rows="2" cols="25" placeholder="Ini area teks panjang..."></textarea></li>
+        <li><button>Ini Tombol</button></li>
+    </ul>
+
+    <div class="song-container">
+        <img src="assets/image/sonnyzero.jpg" alt="Sonny Zero" class="album-cover">
+        
+        <div class="audio-group">
+            
+            <div class="song-info">
+                <h4>what's the point of being friends ?</h4>
+                <p>Sonny Zero</p>
+            </div>
+
+            <audio controls>
+                <source src="assets/audio/what's the point of being friends.mp3" type="audio/mpeg">
+                Browser kamu tidak mendukung pemutar audio ini.
+            </audio>
+            
+            <a href="assets/lyric.html" target="_blank" class="lyric-link">Lihat Song Lyric</a>
+        </div>
+    </div>
+    <hr>
 </body>
 </html>

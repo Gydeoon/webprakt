@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.profile-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 5px solid white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile-container .text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile-container h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.profile-container p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.song-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.album-cover {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.audio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lyric-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: normal;
+    width: fit-content;
+    border: 1px solid #ddd;
+}
+
+.lyric-link:hover {
+    background-color: #e0e0e0;
+    text-decoration: none;
+}
+
+.song-info h4 {
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.song-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.audio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+p {
+    margin-bottom: 15px
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+input[type="text"], textarea, select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
