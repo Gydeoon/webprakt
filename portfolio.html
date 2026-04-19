@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid #000;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #554f4f;
+            margin-left: 20px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .profile-text h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .profile-text p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .grid-section {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .grid-col {
+            flex: 1;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #eaeaea;
+        }
+
+        .grid-col h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .skills-list, .projects-list {
+            list-style: none;
+        }
+
+        .skills-list li, .projects-list li {
+            margin-bottom: 10px;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .skills-list li::before {
+            content: "•";
+            color: #000;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Update Featured Works Section */
+        .portfolio-section {
+            margin-bottom: 60px;
+        }
+
+        .portfolio-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-gallery {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 20px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .portfolio-card {
+            flex: 0 0 300px;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-item {
+            width: 100%;
+            height: 200px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1px solid #eaeaea;
+            margin-bottom: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 4px;
+        }
+
+        .portfolio-card p {
+            font-size: 0.85rem;
+            color: #777;
+            line-height: 1.4;
+        }
+
+        .portfolio-gallery::-webkit-scrollbar {
+            height: 6px;
+        }
+        .portfolio-gallery::-webkit-scrollbar-thumb {
+            background: #ddd;
+            border-radius: 10px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #eaeaea;
+            margin-bottom: 40px;
+        }
+
+        .contact-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            background-color: #fff;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #888;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 24px;
+            background-color: #222;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem;
+        }
+
+        .contact-btn:hover {
+            background-color: #000;
+        }
+
+        @media (max-width: 600px) {
+            .grid-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .portfolio-card {
+                flex: 0 0 85%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <div class="logo">portfolio.</div>
+            <nav>
+                <a href="#profile">Profile</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="profile" class="profile-section">
+            <img src="assets/image/wongkalahan.jpg" alt="Foto Profil Rijal" class="profile-img">
+            <div class="profile-text">
+                <h1>Rijal Rizqullah</h1>
+                <p>Informatics Student with a profound interest in game architecture and the mathematics of motion.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="grid-section">
+            <div class="grid-col">
+                <h2>Technical Skills</h2>
+                <ul class="skills-list">
+                    <li>HTML, CSS & JavaScript</li>
+                    <li>C++, GDScript, Python</li>
+                    <li>Oracle SQL / Database Management</li>
+                    <li>Numerical Methods</li>
+                </ul>
+            </div>
+
+            <div class="grid-col">
+                <h2>Recent Projects</h2>
+                <ul class="projects-list">
+                    <li><strong>Strat.OS</strong> - IoT & AI for CS2 Analysis</li>
+                    <li><strong>Blur</strong> - Adding motion blur to videos</li>
+                    <li><strong>Discord Theme</strong> - Vencord discord theme</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <h2>Featured Works</h2>
+            <div class="portfolio-gallery">
+                
+                <div class="portfolio-card">
+                    <img src="assets/image/stratos.png" alt="Strat.OS" class="portfolio-item">
+                    <h3>STRAT.OS</h3>
+                    <p>AI-Esports Strategist Hub & Analytics</p>
+                </div>
+
+                <div class="portfolio-card">
+                    <img src="assets/image/blur.png" alt="Blur" class="portfolio-item">
+                    <h3>Blur App</h3>
+                    <p>Native desktop application made for easily and efficiently adding motion blur to videos</p>
+                </div>
+
+                <div class="portfolio-card">
+                    <img src="assets/image/vencordtheme.png" alt="Midnight Theme" class="portfolio-item">
+                    <h3>Midnight Theme</h3>
+                    <p>Aesthetic Minimalist Discord UI</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Let's work together</h2>
+            <p style="color: #666; margin-bottom: 25px;">contact me.</p>
+            
+            <form action="#" method="GET" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="nama" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Alamat Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="pesan" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                </div>
+                <button type="submit" class="contact-btn">Kirim Pesan</button>
+            </form>
+        </section>
+
+    </div>
+
+</body>
+</html>
