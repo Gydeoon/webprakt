@@ -155,11 +155,44 @@ body {
     padding: 0 20px;
 }
 
-.car-list-wrapper h2 {
+.fleet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.fleet-header h2 {
     font-size: 1.8em;
     font-weight: 600;
-    margin: 0 0 1em 0;
+    margin: 0;
     color: #1a1a1a;
+}
+
+.scroll-buttons {
+    display: flex;
+    gap: 0.5em;
+}
+
+.scroll-buttons button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.scroll-buttons button:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-color: #1a1a1a;
 }
 
 .car-list {
@@ -348,5 +381,8 @@ body {
     }
     .contact-card {
         padding: 2em;
+    }
+    .scroll-buttons {
+        display: none;
     }
 }
