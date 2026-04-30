@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberHub - Premium Grooming</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">BarberHub.</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div id="home">
+        <div class="hero-content">
+            <div class="title">
+                <h1>Premium Grooming</h1>
+                <p>Book your appointment for the best haircut experience</p>
+            </div>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="service">Select Service</label>
+                    <select id="service" name="service">
+                        <option value="">Choose a service</option>
+                        <option value="haircut">Classic Haircut</option>
+                        <option value="beard">Beard Trim</option>
+                        <option value="combo">Haircut & Beard</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="booking-date">Choose Date</label>
+                    <input type="date" id="booking-date" name="booking-date">
+                </div>
+                <div class="form-group">
+                    <label for="booking-time">Choose Time</label>
+                    <input type="time" id="booking-time" name="booking-time">
+                </div>
+                <button type="submit">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="services" class="service-list-wrapper">
+        <div class="service-header">
+            <h2>Our Styles & Services</h2>
+            <div class="scroll-buttons">
+                <button id="btn-left">&#8592;</button>
+                <button id="btn-right">&#8594;</button>
+            </div>
+        </div>
+        <div class="service-list" id="service-list">
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Classic Fade">
+                <h3>Classic Fade</h3>
+                <p>Clean, sharp, and timeless fade haircut.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Beard Grooming">
+                <h3>Beard Grooming</h3>
+                <p>Precision trimming and shaping for your beard.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Pompadour">
+                <h3>Pompadour</h3>
+                <p>Modern classic style with volume and texture.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80" alt="Buzz Cut">
+                <h3>Buzz Cut</h3>
+                <p>Short, masculine, and low maintenance.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=600&q=80" alt="Hot Towel Shave">
+                <h3>Hot Towel Shave</h3>
+                <p>Traditional straight razor shave experience.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contact-section">
+        <div class="contact-card">
+            <div class="contact-header">
+                <h2>Get in Touch</h2>
+                <p>Drop us a message or chat via WhatsApp</p>
+            </div>
+            <form class="contact-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <textarea placeholder="How can we help you?" rows="4" required></textarea>
+                <div class="action-buttons">
+                    <button type="submit" class="btn-submit">Send Message</button>
+                    <a href="https://wa.me/6281234567890" target="_blank" class="btn-whatsapp">Chat on WhatsApp</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <div class="logo">BarberHub.</div>
+            <p>Gejayan, Yogyakarta. Open Daily 09:00 - 21:00.</p>
+            <p>&copy; 2026 BarberHub.</p>
+        </div>
+    </footer>
+
+    <script>
+        const serviceList = document.getElementById('service-list');
+        const btnLeft = document.getElementById('btn-left');
+        const btnRight = document.getElementById('btn-right');
+
+        btnLeft.addEventListener('click', () => {
+            serviceList.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        btnRight.addEventListener('click', () => {
+            serviceList.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
